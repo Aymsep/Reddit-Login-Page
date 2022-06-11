@@ -1,0 +1,238 @@
+/* import google safe font*/
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital@1&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans', sans-serif;
+    overflow: hidden;
+}
+/*preloader style */
+.preloader-page{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 90%);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    z-index: 100;
+    position:fixed;
+}
+
+/*animate the image to spin*/
+.preloader-page img{
+    animation:spin 0.8s linear alternate infinite ; 
+}
+ @keyframes spin {
+    0%{
+        transform:rotate(45deg);
+    }
+    100%{
+        transform:rotate(-45deg);
+    }
+ }
+/*end of preloader styles*/
+
+/*container display flex*/
+.container{
+    display:flex;
+    height: 100vh;
+}
+
+/*orange background for leftside*/
+.color-side{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 0%, rgba(252,176,69,1) 90%);
+    width: 95px;
+    height: 100%;
+}
+
+/*form display elements as column*/
+.form{
+    display: flex;
+    flex-flow: column wrap;
+    margin-left: 20px;
+    margin-top: 165px;
+    width:300px;
+    height: 600px;
+    align-self:center;
+    padding:0 20px;
+
+}
+
+/*first div header*/
+.header{
+    position:absolute;
+    margin-top:-80px;
+}
+
+
+.header h2{
+    font-size:18px;
+    padding-bottom: 8px;
+}
+
+/*end of header style*/
+
+/*style all paragraph in the form*/
+.form p{
+    font-size:14px;
+}
+
+/*style 2 button apple and google*/
+.form button.google , button.apple{
+    cursor: pointer;
+    width: 100%;
+    padding:13px 0 ;
+    background-color: #ffffff;
+    border: 1px solid #1676bb;
+    margin:10px 0 0;
+    border-radius:4px;
+    color: #1676bb;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+/*animation 2 button on hover*/
+.form button.google:hover , button.apple:hover{
+    background-color:#3394dc;
+    color: white;
+}
+
+/*apple image next inside*/
+button.apple img{
+    margin-left:-22px;
+    margin-right:22px;
+    width: 17px;
+    background-position: center;
+}
+
+/*google image next inside button*/
+button.google img{
+    margin-left:-10px ;
+    margin-right:18px ;
+    width: 17px;
+    background-position: center;
+}
+/*end styling google and apple button*/
+
+/*header 4 style*/
+.form h4{
+    text-align: center;
+    padding-top:35px;
+    color: #828485;
+    padding-bottom:25px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+/*style to make line after header*/
+.form h4::after{
+    content: " ";
+    display: inline-block;
+    width: 115px;
+    height:1px;
+    background-color:#c1c4c7;
+    position: absolute;
+    margin: 8px ;
+}
+
+/*style to make line before header*/
+.form h4::before{
+    content: " ";
+    display: inline-block;
+    width: 118px;
+    height:1px;
+    background-color:#c1c4c7;
+    position: absolute;
+    margin: 8px 0px 0 -125px ;
+}
+ /*end styling header 4*/
+
+ /*styling input fields*/
+.form input{
+    cursor: pointer;
+    width: 100%;
+    border-radius:4px;
+    padding:22px 9px 8px;
+    margin-bottom:13px ;
+    background-color:#fcfcfb;
+    border: 1px solid #c7c7c0;
+    font-size:14px;
+    color: black;
+    outline: none;
+    z-index: 1;
+
+}
+
+
+/*on focus change border fields color*/
+.form input:focus{
+    border:1px solid orange ;
+}
+
+/*div input1 , input2 to make lable inside of fields*/
+.form .input1 , .input2{
+    position: relative;
+    z-index: 1;
+}
+
+/*styling the label*/
+.input1 label, .input2 label{
+    position: absolute;
+    left: 10px;
+    top: 1.2rem;
+    letter-spacing: 1px;
+    color: #969696;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+
+}
+
+/*on focus move label to the top*/
+.username:focus + .email-label , .password:focus + .password-label{
+    top: 0.3rem;
+    font-size:9px;
+}
+/*end styling the inputs fields*/
+
+/*style the last button log in*/
+.form button:last-of-type{
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    border: transparent;
+    border-radius:4px;
+    background-color:#0079d3;
+    padding:10px 0;
+    font-size:14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom:15px;
+}
+
+/*animate button on hover*/
+.form button:last-of-type:hover{
+    opacity:0.8;
+}
+
+ /*target all anchor inside form*/
+.form  a{
+    letter-spacing: 1px;
+    color: #0079d3;
+    text-decoration: none;
+}
+
+/*animate anchor on hover*/
+.form  a:hover{
+    opacity: 0.8;
+}
+/*end of style*/
+
+

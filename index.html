@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="images/reddit.png">
+    <title>Reddit-Login</title>
+</head>
+<body>
+    <div class="preloader-page">
+        <img src="images/reddit.png" alt="" width="85px">
+    </div>
+    <!--container flex -->
+    <div class="container">
+
+        <!--orange color side-->
+        <div class="color-side">
+
+        </div>
+
+        <!--div form containing elements flex column-->
+        <div class="form">
+
+            <!--header to display full width-->
+            <div class="header">
+
+                <h2>Log in</h2>
+            <p>By continuing, you agree to our <a href="#">User Agreement</a> and <a href="#">Privacy Policy.</a></p>
+            </div>
+
+            <!--two space-->
+            <br><br>
+
+            <!--2 button containing appple,google img and text-->
+            <button type="submit" class="google">
+                <img src="images/google.png" alt="">
+                continue with google
+            </button>
+
+            <button type="submit" class="apple">
+                <img src="images/apple.png" alt="">
+                continue with apple
+            </button>
+            <!--header 4 beetwen 2 line in the css-->
+            <h4>OR</h4>
+            <!--2 divs containing input fields (email,password), and 2 labels-->
+            <div class="input1">
+            <input type="email" class="username">
+            <label for="" class="email-label">username</label>
+            </div>
+
+            <div class="input2">
+                <input type="password" class="password">
+                <label for="" class="password-label">password</label>
+            </div>
+
+            <!--button login-->
+            <button type="submit" class="login">log in</button>
+
+            <!--two paragraph-->
+            <p>Forgot your <a href="#">username</a> or <a href="#">password ?</a></p>
+            <br>
+            <p>New to Reddit? <a href="#">SIGN UP</a></p>
+
+        </div>
+        <!--end of form-->
+    </div>
+    <!--end of container-->
+
+    <script>
+        const loader = document.querySelector(".preloader-page");    
+        setTimeout(() => loader.style.display = "none" , 3000)
+        </script>
+        
+    </body>
+</html>
